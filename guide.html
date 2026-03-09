@@ -30,19 +30,19 @@
     <!-- Cycle Diagram -->
     <div class="diagram-container">
       <div class="cycle-diagram">
-        <div class="cycle-step s1">
+        <div class="cycle-step s1 step-done">
           <div class="cycle-circle">&#128269;</div>
           <span class="cycle-label">Identifier</span>
-          <button class="hotspot-inline" data-hotspot="1" data-tooltip="Identifier les usages prioritaires" aria-label="Pastille 1">
+          <button class="hotspot-inline hotspot-done" data-hotspot="1" data-tooltip="Identifier les usages prioritaires" aria-label="Pastille 1">
             <span class="hotspot-number">1</span>
             <span class="hotspot-pulse"></span>
           </button>
         </div>
         <span class="cycle-arrow">&#10132;</span>
-        <div class="cycle-step s2">
+        <div class="cycle-step s2 step-done">
           <div class="cycle-circle">&#9889;</div>
           <span class="cycle-label">Tester</span>
-          <button class="hotspot-inline" data-hotspot="2" data-tooltip="Tester sur des cas r&eacute;els" aria-label="Pastille 2">
+          <button class="hotspot-inline hotspot-done" data-hotspot="2" data-tooltip="Tester sur des cas r&eacute;els" aria-label="Pastille 2">
             <span class="hotspot-number">2</span>
             <span class="hotspot-pulse"></span>
           </button>
@@ -125,30 +125,33 @@
       1: {
         title: "Identifier les usages prioritaires",
         body: `
-          <p>La premi&egrave;re &eacute;tape consiste &agrave; <strong>rep&eacute;rer les t&acirc;ches</strong> sur lesquelles l'IA peut apporter un b&eacute;n&eacute;fice r&eacute;el et rapide.</p>
-          <h3>Comment identifier ?</h3>
+          <div class="highlight-box" style="background: #F3F4F6; border-left-color: #9CA3AF;">
+            <strong>Phase r&eacute;alis&eacute;e</strong> &mdash; Cette &eacute;tape a &eacute;t&eacute; men&eacute;e au d&eacute;but de l'ann&eacute;e 2026.
+          </div>
+          <p>La premi&egrave;re &eacute;tape consistait &agrave; <strong>rep&eacute;rer les t&acirc;ches</strong> sur lesquelles l'IA peut apporter un b&eacute;n&eacute;fice r&eacute;el et rapide.</p>
+          <h3>Ce qui a &eacute;t&eacute; fait</h3>
           <ul>
             <li>Lister les t&acirc;ches r&eacute;p&eacute;titives ou chronophages dans chaque service</li>
             <li>Rep&eacute;rer celles qui impliquent de la r&eacute;daction, de la synth&egrave;se ou de l'analyse</li>
             <li>Privil&eacute;gier les usages &agrave; <strong>gain rapide</strong> et <strong>faible risque</strong></li>
             <li>Retenir 5 &agrave; 8 usages pour commencer</li>
           </ul>
-          <div class="highlight-box">
-            <strong>Conseil :</strong> commencez par ce qui est le plus facile &agrave; tester, pas par ce qui est le plus ambitieux.
-          </div>
         `,
         footer: ''
       },
       2: {
         title: "Tester sur des cas r\u00e9els",
         body: `
-          <p>Une fois les usages identifi&eacute;s, il faut les <strong>exp&eacute;rimenter sur des situations de travail r&eacute;elles</strong>, pas sur des exercices artificiels.</p>
-          <h3>Principes du test</h3>
+          <div class="highlight-box" style="background: #F3F4F6; border-left-color: #9CA3AF;">
+            <strong>Phase r&eacute;alis&eacute;e</strong> &mdash; Les tests ont &eacute;t&eacute; men&eacute;s lors des six demi-journ&eacute;es de formation r&eacute;alis&eacute;es en mars 2026.
+          </div>
+          <p>Les usages identifi&eacute;s ont &eacute;t&eacute; <strong>exp&eacute;riment&eacute;s sur des situations de travail r&eacute;elles</strong> pendant les sessions de formation.</p>
+          <h3>Ce qui a &eacute;t&eacute; fait</h3>
           <ul>
-            <li>Utiliser l'IA sur une t&acirc;che que vous auriez r&eacute;alis&eacute;e de toute fa&ccedil;on</li>
-            <li>Comparer le r&eacute;sultat avec ce que vous auriez produit sans IA</li>
+            <li>Utiliser l'IA sur des t&acirc;ches concr&egrave;tes issues du quotidien des agents</li>
+            <li>Comparer le r&eacute;sultat avec ce qui aurait &eacute;t&eacute; produit sans IA</li>
             <li>Noter le temps total : pr&eacute;paration + g&eacute;n&eacute;ration + relecture + correction</li>
-            <li>Ne pas oublier de <strong>v&eacute;rifier et valider</strong> chaque r&eacute;sultat</li>
+            <li><strong>V&eacute;rifier et valider</strong> chaque r&eacute;sultat produit par l'IA</li>
           </ul>
           <div class="highlight-box">
             <strong>Important :</strong> un test r&eacute;ussi n'est pas un test o&ugrave; l'IA a &laquo; impressionn&eacute; &raquo;. C'est un test o&ugrave; le r&eacute;sultat final est meilleur ou plus rapide qu'avant.
