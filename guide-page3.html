@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesurer simplement un usage - PilotageIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">PilotageIA</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="guide-page">
+    <div class="guide-header">
+      <h1>Mesurer simplement un usage</h1>
+      <div class="guide-intro">
+        <p>La mesure doit &ecirc;tre <strong>l&eacute;g&egrave;re</strong>. Si elle devient trop compliqu&eacute;e, elle ne sera pas faite. Pour chaque usage prioritaire, il est recommand&eacute; d'utiliser une fiche tr&egrave;s simple, remplie <strong>avant</strong> puis <strong>apr&egrave;s</strong> exp&eacute;rimentation.</p>
+      </div>
+      <p class="guide-subtitle">Cliquez sur les pastilles orange pour d&eacute;couvrir chaque &eacute;l&eacute;ment de la fiche</p>
+    </div>
+
+    <!-- Fiche de suivi preview -->
+    <div class="diagram-container">
+      <div class="fiche-preview">
+        <div class="fiche-title">Fiche de suivi d'usage IA</div>
+        <div class="fiche-grid">
+          <div class="fiche-field">
+            <span class="fiche-label">Nom de la t&acirc;che</span>
+            <div class="fiche-value placeholder">
+              Ex : R&eacute;daction de compte rendu
+              <button class="hotspot-inline" data-hotspot="1" data-tooltip="D&eacute;crire la t&acirc;che" aria-label="Pastille 1" style="margin-left: 0.5rem;">
+                <span class="hotspot-number">1</span>
+                <span class="hotspot-pulse"></span>
+              </button>
+            </div>
+          </div>
+          <div class="fiche-field">
+            <span class="fiche-label">Service concern&eacute;</span>
+            <div class="fiche-value placeholder">Ex : Direction g&eacute;n&eacute;rale</div>
+          </div>
+          <div class="fiche-field">
+            <span class="fiche-label">Outil utilis&eacute;</span>
+            <div class="fiche-value placeholder">Ex : Gemini</div>
+          </div>
+          <div class="fiche-field">
+            <span class="fiche-label">Fr&eacute;quence</span>
+            <div class="fiche-value placeholder">Ex : Hebdomadaire</div>
+          </div>
+
+          <div class="fiche-separator"></div>
+
+          <div class="fiche-comparison">
+            <div class="fiche-comparison-title">Comparaison avant / apr&egrave;s</div>
+            <div class="fiche-field">
+              <span class="fiche-label">Temps moyen AVANT IA
+                <button class="hotspot-inline" data-hotspot="2" data-tooltip="Mesurer avant" aria-label="Pastille 2" style="margin-left: 0.25rem;">
+                  <span class="hotspot-number">2</span>
+                  <span class="hotspot-pulse"></span>
+                </button>
+              </span>
+              <div class="fiche-value placeholder">Ex : 1 h 30</div>
+            </div>
+            <div class="fiche-field">
+              <span class="fiche-label">Temps moyen APR&Egrave;S IA
+                <button class="hotspot-inline" data-hotspot="3" data-tooltip="Mesurer apr&egrave;s" aria-label="Pastille 3" style="margin-left: 0.25rem;">
+                  <span class="hotspot-number">3</span>
+                  <span class="hotspot-pulse"></span>
+                </button>
+              </span>
+              <div class="fiche-value placeholder">Ex : 40 min + 10 min v&eacute;rif.</div>
+            </div>
+          </div>
+
+          <div class="fiche-field">
+            <span class="fiche-label">Gain estim&eacute; / Effets observ&eacute;s
+              <button class="hotspot-inline" data-hotspot="4" data-tooltip="Noter les gains r&eacute;els" aria-label="Pastille 4" style="margin-left: 0.25rem;">
+                <span class="hotspot-number">4</span>
+                <span class="hotspot-pulse"></span>
+              </button>
+            </span>
+            <div class="fiche-value placeholder">Ex : 40 min gagn&eacute;es, rendu plus homog&egrave;ne</div>
+          </div>
+          <div class="fiche-field">
+            <span class="fiche-label">Points de vigilance
+              <button class="hotspot-inline" data-hotspot="5" data-tooltip="Signaler les limites" aria-label="Pastille 5" style="margin-left: 0.25rem;">
+                <span class="hotspot-number">5</span>
+                <span class="hotspot-pulse"></span>
+              </button>
+            </span>
+            <div class="fiche-value placeholder">Ex : V&eacute;rifier les noms propres</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span class="legend-dot"></span>
+      Cliquez sur une pastille pour en savoir plus
+    </div>
+
+    <div class="content-section">
+      <div class="info-box">
+        <strong>Principe de comparaison :</strong> il ne suffit pas de mesurer le temps de g&eacute;n&eacute;ration par l'outil. Il faut mesurer le temps <strong>complet</strong> : pr&eacute;paration, g&eacute;n&eacute;ration, relecture, correction et finalisation.
+      </div>
+
+      <div class="example-box">
+        <div class="example-box-title">Exemple concret</div>
+        <dl>
+          <dt>T&acirc;che :</dt>
+          <dd>R&eacute;diger un compte rendu &agrave; partir d'un enregistrement</dd>
+          <dt>Avant IA :</dt>
+          <dd>1 h 30</dd>
+          <dt>Apr&egrave;s IA :</dt>
+          <dd>40 min + 10 min de v&eacute;rification</dd>
+          <dt>Gain estim&eacute; :</dt>
+          <dd>40 min</dd>
+          <dt>Effet compl&eacute;mentaire :</dt>
+          <dd>Compte rendu plus homog&egrave;ne, mieux structur&eacute;</dd>
+        </dl>
+      </div>
+
+      <h2>&Eacute;chelles simples recommand&eacute;es</h2>
+      <div class="scales-grid">
+        <div class="scale-box">
+          <div class="scale-title" style="color: #DC2626;">Irritation</div>
+          <div class="scale-items">
+            <div class="scale-item"><span class="scale-number" style="background: #86EFAC;">1</span> Faible</div>
+            <div class="scale-item"><span class="scale-number" style="background: #FDE047;">2</span> Mod&eacute;r&eacute;e</div>
+            <div class="scale-item"><span class="scale-number" style="background: #FDBA74;">3</span> G&ecirc;nante</div>
+            <div class="scale-item"><span class="scale-number" style="background: #FB923C;">4</span> Forte</div>
+            <div class="scale-item"><span class="scale-number" style="background: #EF4444;">5</span> Tr&egrave;s forte</div>
+          </div>
+        </div>
+        <div class="scale-box">
+          <div class="scale-title" style="color: #059669;">Qualit&eacute;</div>
+          <div class="scale-items">
+            <div class="scale-item"><span class="scale-number" style="background: #EF4444;">1</span> Insuffisante</div>
+            <div class="scale-item"><span class="scale-number" style="background: #FDBA74;">2</span> Moyenne</div>
+            <div class="scale-item"><span class="scale-number" style="background: #FDE047;">3</span> Correcte</div>
+            <div class="scale-item"><span class="scale-number" style="background: #86EFAC;">4</span> Bonne</div>
+            <div class="scale-item"><span class="scale-number" style="background: #34D399;">5</span> Tr&egrave;s bonne</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-dual">
+      <a href="guide-page2.html" class="nav-banner nav-banner-prev">
+        <div class="nav-banner-arrow">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path>
+          </svg>
+        </div>
+        <div class="nav-banner-content">
+          <span class="nav-banner-label">Page pr&eacute;c&eacute;dente</span>
+          <span class="nav-banner-title">Les 4 effets &agrave; mesurer</span>
+        </div>
+      </a>
+      <a href="guide-page4.html" class="nav-banner nav-banner-next">
+        <div class="nav-banner-content">
+          <span class="nav-banner-label">Page suivante</span>
+          <span class="nav-banner-title">Organiser le pilotage</span>
+        </div>
+        <div class="nav-banner-arrow">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal-inner">
+        <button class="modal-close" id="modalClose" aria-label="Fermer">&times;</button>
+        <div class="modal-header">
+          <span class="modal-badge" id="modalBadge">1</span>
+          <h2 class="modal-title" id="modalTitle"></h2>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <script>
+    const pageContent = {
+      1: {
+        title: "D\u00e9crire la t\u00e2che",
+        body: `
+          <p>Chaque fiche commence par une <strong>description pr&eacute;cise de la t&acirc;che</strong> concern&eacute;e.</p>
+          <h3>Ce qu'il faut renseigner</h3>
+          <ul>
+            <li><strong>Nom de la t&acirc;che</strong> : une description courte et compr&eacute;hensible</li>
+            <li><strong>Service concern&eacute;</strong> : pour savoir qui est impliqu&eacute;</li>
+            <li><strong>Outil utilis&eacute;</strong> : Gemini, NotebookLM, autre</li>
+            <li><strong>Fr&eacute;quence</strong> : quotidienne, hebdomadaire, ponctuelle</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Conseil :</strong> une fiche par usage. Ne m&eacute;langez pas plusieurs t&acirc;ches sur la m&ecirc;me fiche.
+          </div>
+        `,
+        footer: ''
+      },
+      2: {
+        title: "Mesurer avant",
+        body: `
+          <p>Avant d'utiliser l'IA, notez le <strong>temps habituellement consacr&eacute;</strong> &agrave; la t&acirc;che et votre niveau d'irritation.</p>
+          <h3>Pourquoi c'est important</h3>
+          <ul>
+            <li>Sans r&eacute;f&eacute;rence &laquo; avant &raquo;, impossible de mesurer un progr&egrave;s</li>
+            <li>Une estimation honn&ecirc;te suffit &mdash; pas besoin de chronom&eacute;trer</li>
+            <li>Notez aussi le niveau de <strong>p&eacute;nibilit&eacute;</strong> (1 &agrave; 5) et de <strong>qualit&eacute;</strong> (1 &agrave; 5)</li>
+          </ul>
+        `,
+        footer: ''
+      },
+      3: {
+        title: "Mesurer apr\u00e8s",
+        body: `
+          <p>Apr&egrave;s avoir utilis&eacute; l'IA sur la m&ecirc;me t&acirc;che, notez le <strong>temps total</strong> et les m&ecirc;mes indicateurs.</p>
+          <h3>Temps total = tout inclus</h3>
+          <ul>
+            <li>Pr&eacute;paration du prompt</li>
+            <li>Temps de g&eacute;n&eacute;ration par l'IA</li>
+            <li>Relecture et correction</li>
+            <li>Finalisation du document</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Rappel :</strong> ne comptez pas seulement les secondes de g&eacute;n&eacute;ration. Le temps de relecture et de correction fait partie du co&ucirc;t r&eacute;el.
+          </div>
+        `,
+        footer: ''
+      },
+      4: {
+        title: "Noter les gains r\u00e9els",
+        body: `
+          <p>Comparez les deux mesures et notez les <strong>gains concrets observ&eacute;s</strong>.</p>
+          <h3>Types de gains</h3>
+          <ul>
+            <li><strong>Temps</strong> : combien de minutes/heures &eacute;conomis&eacute;es ?</li>
+            <li><strong>Confort</strong> : la t&acirc;che est-elle devenue moins p&eacute;nible ?</li>
+            <li><strong>Qualit&eacute;</strong> : le r&eacute;sultat est-il meilleur ?</li>
+            <li><strong>Capacit&eacute;</strong> : une action nouvelle est-elle devenue possible ?</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>&Agrave; retenir :</strong> si le gain n'est pas visible ou mesurable, l'usage ne m&eacute;rite peut-&ecirc;tre pas d'&ecirc;tre conserv&eacute;.
+          </div>
+        `,
+        footer: ''
+      },
+      5: {
+        title: "Signaler les limites",
+        body: `
+          <p>Chaque fiche doit aussi mentionner les <strong>points de vigilance</strong> rencontr&eacute;s.</p>
+          <h3>Exemples de limites fr&eacute;quentes</h3>
+          <ul>
+            <li>Noms propres ou chiffres parfois inexacts</li>
+            <li>Tonalit&eacute; ou style &agrave; ajuster</li>
+            <li>Donn&eacute;es sensibles &agrave; ne pas int&eacute;grer dans le prompt</li>
+            <li>R&eacute;sultat n&eacute;cessitant une relecture syst&eacute;matique</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Important :</strong> documenter les limites est aussi utile que documenter les succ&egrave;s. Cela &eacute;vite aux autres de r&eacute;p&eacute;ter les m&ecirc;mes erreurs.
+          </div>
+        `,
+        footer: ''
+      }
+    };
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

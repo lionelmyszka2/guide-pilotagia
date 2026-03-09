@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue d'ensemble - PilotageIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">PilotageIA</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="guide-page">
+    <div class="guide-header">
+      <h1>Piloter les usages de l'IA &mdash; Vue d'ensemble</h1>
+      <div class="guide-intro">
+        <p>L'IA g&eacute;n&eacute;rative ne produit de valeur durable que si son usage est suivi dans le temps. Apr&egrave;s les formations, l'enjeu n'est plus seulement de d&eacute;couvrir les outils, mais d'<strong>identifier les usages r&eacute;ellement utiles</strong>, de <strong>mesurer leurs effets</strong>, de <strong>s&eacute;curiser leur mise en &oelig;uvre</strong> et de <strong>diffuser les bonnes pratiques</strong>.</p>
+      </div>
+      <p class="guide-subtitle">Cliquez sur les pastilles orange pour d&eacute;couvrir chaque &eacute;tape du cycle</p>
+    </div>
+
+    <!-- Cycle Diagram -->
+    <div class="diagram-container">
+      <div class="cycle-diagram">
+        <div class="cycle-step s1">
+          <div class="cycle-circle">&#128269;</div>
+          <span class="cycle-label">Identifier</span>
+          <button class="hotspot-inline" data-hotspot="1" data-tooltip="Identifier les usages prioritaires" aria-label="Pastille 1">
+            <span class="hotspot-number">1</span>
+            <span class="hotspot-pulse"></span>
+          </button>
+        </div>
+        <span class="cycle-arrow">&#10132;</span>
+        <div class="cycle-step s2">
+          <div class="cycle-circle">&#9889;</div>
+          <span class="cycle-label">Tester</span>
+          <button class="hotspot-inline" data-hotspot="2" data-tooltip="Tester sur des cas r&eacute;els" aria-label="Pastille 2">
+            <span class="hotspot-number">2</span>
+            <span class="hotspot-pulse"></span>
+          </button>
+        </div>
+        <span class="cycle-arrow">&#10132;</span>
+        <div class="cycle-step s3">
+          <div class="cycle-circle">&#128200;</div>
+          <span class="cycle-label">Mesurer</span>
+          <button class="hotspot-inline" data-hotspot="3" data-tooltip="Mesurer les effets" aria-label="Pastille 3">
+            <span class="hotspot-number">3</span>
+            <span class="hotspot-pulse"></span>
+          </button>
+        </div>
+        <span class="cycle-arrow">&#10132;</span>
+        <div class="cycle-step s4">
+          <div class="cycle-circle">&#128295;</div>
+          <span class="cycle-label">Ajuster</span>
+          <button class="hotspot-inline" data-hotspot="4" data-tooltip="Ajuster les pratiques" aria-label="Pastille 4">
+            <span class="hotspot-number">4</span>
+            <span class="hotspot-pulse"></span>
+          </button>
+        </div>
+        <span class="cycle-arrow">&#10132;</span>
+        <div class="cycle-step s5">
+          <div class="cycle-circle">&#128640;</div>
+          <span class="cycle-label">Diffuser</span>
+          <button class="hotspot-inline" data-hotspot="5" data-tooltip="Diffuser ce qui fonctionne" aria-label="Pastille 5">
+            <span class="hotspot-number">5</span>
+            <span class="hotspot-pulse"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span class="legend-dot"></span>
+      Cliquez sur une pastille pour en savoir plus
+    </div>
+
+    <div class="content-section">
+      <div class="highlight-box">
+        <strong>&Agrave; retenir :</strong> on commence petit, sur quelques usages prioritaires ; on mesure des effets concrets ; on partage les bonnes pratiques et les points de vigilance ; on ajuste au fil des retours d'exp&eacute;rience.
+      </div>
+
+      <p>Ce guide propose une m&eacute;thode simple pour continuer &agrave; progresser de mani&egrave;re autonome, sans complexifier l'organisation. L'objectif n'est pas de tester l'IA partout, mais de <strong>stabiliser un nombre limit&eacute; d'usages &agrave; forte valeur ajout&eacute;e</strong>.</p>
+    </div>
+
+    <a href="guide-page2.html" class="next-page-banner">
+      <div class="next-page-content">
+        <span class="next-page-label">Page suivante</span>
+        <span class="next-page-title">Les 4 effets &agrave; mesurer</span>
+        <span class="next-page-desc">Temps, irritants, qualit&eacute;, nouvelles actions : les crit&egrave;res concrets</span>
+      </div>
+      <div class="next-page-arrow">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M12 5l7 7-7 7"></path>
+        </svg>
+      </div>
+    </a>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal-inner">
+        <button class="modal-close" id="modalClose" aria-label="Fermer">&times;</button>
+        <div class="modal-header">
+          <span class="modal-badge" id="modalBadge">1</span>
+          <h2 class="modal-title" id="modalTitle"></h2>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <script>
+    const pageContent = {
+      1: {
+        title: "Identifier les usages prioritaires",
+        body: `
+          <p>La premi&egrave;re &eacute;tape consiste &agrave; <strong>rep&eacute;rer les t&acirc;ches</strong> sur lesquelles l'IA peut apporter un b&eacute;n&eacute;fice r&eacute;el et rapide.</p>
+          <h3>Comment identifier ?</h3>
+          <ul>
+            <li>Lister les t&acirc;ches r&eacute;p&eacute;titives ou chronophages dans chaque service</li>
+            <li>Rep&eacute;rer celles qui impliquent de la r&eacute;daction, de la synth&egrave;se ou de l'analyse</li>
+            <li>Privil&eacute;gier les usages &agrave; <strong>gain rapide</strong> et <strong>faible risque</strong></li>
+            <li>Retenir 5 &agrave; 8 usages pour commencer</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Conseil :</strong> commencez par ce qui est le plus facile &agrave; tester, pas par ce qui est le plus ambitieux.
+          </div>
+        `,
+        footer: ''
+      },
+      2: {
+        title: "Tester sur des cas r\u00e9els",
+        body: `
+          <p>Une fois les usages identifi&eacute;s, il faut les <strong>exp&eacute;rimenter sur des situations de travail r&eacute;elles</strong>, pas sur des exercices artificiels.</p>
+          <h3>Principes du test</h3>
+          <ul>
+            <li>Utiliser l'IA sur une t&acirc;che que vous auriez r&eacute;alis&eacute;e de toute fa&ccedil;on</li>
+            <li>Comparer le r&eacute;sultat avec ce que vous auriez produit sans IA</li>
+            <li>Noter le temps total : pr&eacute;paration + g&eacute;n&eacute;ration + relecture + correction</li>
+            <li>Ne pas oublier de <strong>v&eacute;rifier et valider</strong> chaque r&eacute;sultat</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Important :</strong> un test r&eacute;ussi n'est pas un test o&ugrave; l'IA a &laquo; impressionn&eacute; &raquo;. C'est un test o&ugrave; le r&eacute;sultat final est meilleur ou plus rapide qu'avant.
+          </div>
+        `,
+        footer: ''
+      },
+      3: {
+        title: "Mesurer les effets",
+        body: `
+          <p>Chaque usage test&eacute; doit &ecirc;tre <strong>&eacute;valu&eacute; selon quatre crit&egrave;res</strong> : gain de temps, r&eacute;duction des irritants, am&eacute;lioration de la qualit&eacute;, nouvelles actions possibles.</p>
+          <h3>Comment mesurer ?</h3>
+          <ul>
+            <li>Utiliser une <strong>fiche de suivi simple</strong> (voir page 3)</li>
+            <li>Comparer avant / apr&egrave;s sur chaque crit&egrave;re</li>
+            <li>Ne pas chercher la pr&eacute;cision absolue : une estimation honn&ecirc;te suffit</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Rappel :</strong> mesurez le temps <em>complet</em>, pas seulement le temps de g&eacute;n&eacute;ration par l'IA.
+          </div>
+        `,
+        footer: ''
+      },
+      4: {
+        title: "Ajuster les pratiques",
+        body: `
+          <p>Apr&egrave;s quelques semaines de test, il est essentiel de faire le point et d'<strong>ajuster</strong>.</p>
+          <h3>Questions &agrave; se poser</h3>
+          <ul>
+            <li>L'usage apporte-t-il un b&eacute;n&eacute;fice visible et mesurable ?</li>
+            <li>Les agents sont-ils &agrave; l'aise avec l'outil ?</li>
+            <li>Y a-t-il des risques non anticip&eacute;s (donn&eacute;es sensibles, erreurs) ?</li>
+            <li>Faut-il <strong>poursuivre, modifier, suspendre ou &eacute;tendre</strong> cet usage ?</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Conseil :</strong> ne conservez que les usages qui apportent un gain r&eacute;el. Abandonner un usage non concluant est un signe de maturit&eacute;.
+          </div>
+        `,
+        footer: ''
+      },
+      5: {
+        title: "Diffuser ce qui fonctionne",
+        body: `
+          <p>Les usages valid&eacute;s doivent &ecirc;tre <strong>partag&eacute;s</strong> pour que d'autres services puissent en b&eacute;n&eacute;ficier.</p>
+          <h3>Moyens de diffusion</h3>
+          <ul>
+            <li>Fiches d'usage courtes et concrètes</li>
+            <li>Exemples de prompts efficaces</li>
+            <li>Retours d'exp&eacute;rience (ce qui marche <em>et</em> ce qui ne marche pas)</li>
+            <li>Pr&eacute;sentation en r&eacute;union d'&eacute;quipe ou inter-services</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>&Agrave; retenir :</strong> l'objectif n'est pas d'accumuler des documents, mais de rendre les usages utiles plus faciles &agrave; reproduire.
+          </div>
+        `,
+        footer: ''
+      }
+    };
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
